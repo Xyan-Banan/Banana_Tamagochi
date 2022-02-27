@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace Tamagochi
 {
+    enum Actions
+    {
+        Eat,
+        Sleep,
+        Game,
+        Clear
+    }
     class Settings
     {
         public static Scale eat;
@@ -31,7 +38,7 @@ namespace Tamagochi
             sub = 8;
 
             is_gameover = false;
-            speed = 2;
+            speed = 10;
             default_sub = 1;
         }
     }
