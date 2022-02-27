@@ -16,6 +16,10 @@ namespace Tamagochi
         public static int sub;
         public static int add;
 
+        public static bool is_gameover;
+        public static int speed;
+        public static int default_sub;
+
         public Settings()
         {
             eat = new Scale();
@@ -25,6 +29,10 @@ namespace Tamagochi
             hp = new Scale();
             add = 15;
             sub = 8;
+
+            is_gameover = false;
+            speed = 2;
+            default_sub = 1;
         }
     }
 }

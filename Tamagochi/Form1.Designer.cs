@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEatCur = new System.Windows.Forms.Label();
             this.lblEatMax = new System.Windows.Forms.Label();
             this.lblSleepMax = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.lblSleep = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbImage = new System.Windows.Forms.PictureBox();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lblHP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblHappy)).BeginInit();
@@ -61,9 +63,10 @@
             // 
             this.lblEatCur.AutoSize = true;
             this.lblEatCur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblEatCur.Location = new System.Drawing.Point(121, 78);
+            this.lblEatCur.Location = new System.Drawing.Point(91, 63);
+            this.lblEatCur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEatCur.Name = "lblEatCur";
-            this.lblEatCur.Size = new System.Drawing.Size(36, 25);
+            this.lblEatCur.Size = new System.Drawing.Size(29, 20);
             this.lblEatCur.TabIndex = 2;
             this.lblEatCur.Text = "95";
             // 
@@ -72,9 +75,10 @@
             this.lblEatMax.AutoSize = true;
             this.lblEatMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblEatMax.ForeColor = System.Drawing.Color.Black;
-            this.lblEatMax.Location = new System.Drawing.Point(121, 115);
+            this.lblEatMax.Location = new System.Drawing.Point(91, 93);
+            this.lblEatMax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEatMax.Name = "lblEatMax";
-            this.lblEatMax.Size = new System.Drawing.Size(48, 25);
+            this.lblEatMax.Size = new System.Drawing.Size(39, 20);
             this.lblEatMax.TabIndex = 3;
             this.lblEatMax.Text = "100";
             // 
@@ -82,9 +86,10 @@
             // 
             this.lblSleepMax.AutoSize = true;
             this.lblSleepMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSleepMax.Location = new System.Drawing.Point(291, 115);
+            this.lblSleepMax.Location = new System.Drawing.Point(218, 93);
+            this.lblSleepMax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSleepMax.Name = "lblSleepMax";
-            this.lblSleepMax.Size = new System.Drawing.Size(48, 25);
+            this.lblSleepMax.Size = new System.Drawing.Size(39, 20);
             this.lblSleepMax.TabIndex = 6;
             this.lblSleepMax.Text = "100";
             // 
@@ -92,9 +97,10 @@
             // 
             this.lblSleepCur.AutoSize = true;
             this.lblSleepCur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSleepCur.Location = new System.Drawing.Point(291, 78);
+            this.lblSleepCur.Location = new System.Drawing.Point(218, 63);
+            this.lblSleepCur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSleepCur.Name = "lblSleepCur";
-            this.lblSleepCur.Size = new System.Drawing.Size(36, 25);
+            this.lblSleepCur.Size = new System.Drawing.Size(29, 20);
             this.lblSleepCur.TabIndex = 5;
             this.lblSleepCur.Text = "95";
             // 
@@ -102,9 +108,10 @@
             // 
             this.lblHappyMax.AutoSize = true;
             this.lblHappyMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblHappyMax.Location = new System.Drawing.Point(471, 115);
+            this.lblHappyMax.Location = new System.Drawing.Point(353, 93);
+            this.lblHappyMax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHappyMax.Name = "lblHappyMax";
-            this.lblHappyMax.Size = new System.Drawing.Size(48, 25);
+            this.lblHappyMax.Size = new System.Drawing.Size(39, 20);
             this.lblHappyMax.TabIndex = 9;
             this.lblHappyMax.Text = "100";
             // 
@@ -112,9 +119,10 @@
             // 
             this.lblHappyCur.AutoSize = true;
             this.lblHappyCur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblHappyCur.Location = new System.Drawing.Point(471, 78);
+            this.lblHappyCur.Location = new System.Drawing.Point(353, 63);
+            this.lblHappyCur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHappyCur.Name = "lblHappyCur";
-            this.lblHappyCur.Size = new System.Drawing.Size(36, 25);
+            this.lblHappyCur.Size = new System.Drawing.Size(29, 20);
             this.lblHappyCur.TabIndex = 8;
             this.lblHappyCur.Text = "95";
             // 
@@ -122,9 +130,10 @@
             // 
             this.lblClearMax.AutoSize = true;
             this.lblClearMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblClearMax.Location = new System.Drawing.Point(638, 115);
+            this.lblClearMax.Location = new System.Drawing.Point(478, 93);
+            this.lblClearMax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClearMax.Name = "lblClearMax";
-            this.lblClearMax.Size = new System.Drawing.Size(48, 25);
+            this.lblClearMax.Size = new System.Drawing.Size(39, 20);
             this.lblClearMax.TabIndex = 12;
             this.lblClearMax.Text = "100";
             // 
@@ -132,9 +141,10 @@
             // 
             this.lblClearCur.AutoSize = true;
             this.lblClearCur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblClearCur.Location = new System.Drawing.Point(638, 78);
+            this.lblClearCur.Location = new System.Drawing.Point(478, 63);
+            this.lblClearCur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClearCur.Name = "lblClearCur";
-            this.lblClearCur.Size = new System.Drawing.Size(36, 25);
+            this.lblClearCur.Size = new System.Drawing.Size(29, 20);
             this.lblClearCur.TabIndex = 11;
             this.lblClearCur.Text = "95";
             // 
@@ -142,9 +152,10 @@
             // 
             this.lblHPMax.AutoSize = true;
             this.lblHPMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblHPMax.Location = new System.Drawing.Point(921, 115);
+            this.lblHPMax.Location = new System.Drawing.Point(691, 93);
+            this.lblHPMax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHPMax.Name = "lblHPMax";
-            this.lblHPMax.Size = new System.Drawing.Size(48, 25);
+            this.lblHPMax.Size = new System.Drawing.Size(39, 20);
             this.lblHPMax.TabIndex = 15;
             this.lblHPMax.Text = "100";
             // 
@@ -152,9 +163,10 @@
             // 
             this.lblHPCur.AutoSize = true;
             this.lblHPCur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblHPCur.Location = new System.Drawing.Point(921, 78);
+            this.lblHPCur.Location = new System.Drawing.Point(691, 63);
+            this.lblHPCur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHPCur.Name = "lblHPCur";
-            this.lblHPCur.Size = new System.Drawing.Size(36, 25);
+            this.lblHPCur.Size = new System.Drawing.Size(29, 20);
             this.lblHPCur.TabIndex = 14;
             this.lblHPCur.Text = "95";
             // 
@@ -162,9 +174,10 @@
             // 
             this.lblGameOver.AutoSize = true;
             this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblGameOver.Location = new System.Drawing.Point(192, 608);
+            this.lblGameOver.Location = new System.Drawing.Point(144, 494);
+            this.lblGameOver.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGameOver.Name = "lblGameOver";
-            this.lblGameOver.Size = new System.Drawing.Size(237, 24);
+            this.lblGameOver.Size = new System.Drawing.Size(190, 18);
             this.lblGameOver.TabIndex = 20;
             this.lblGameOver.Text = "Он умер! Это ужасно :(";
             // 
@@ -173,9 +186,10 @@
             this.btnClear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClear.BackgroundImage = global::Tamagochi.Properties.Resources._10;
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClear.Location = new System.Drawing.Point(817, 437);
+            this.btnClear.Location = new System.Drawing.Point(613, 355);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(154, 148);
+            this.btnClear.Size = new System.Drawing.Size(116, 120);
             this.btnClear.TabIndex = 19;
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -185,9 +199,10 @@
             this.btnHappy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnHappy.BackgroundImage = global::Tamagochi.Properties.Resources._9;
             this.btnHappy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHappy.Location = new System.Drawing.Point(626, 437);
+            this.btnHappy.Location = new System.Drawing.Point(470, 355);
+            this.btnHappy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHappy.Name = "btnHappy";
-            this.btnHappy.Size = new System.Drawing.Size(154, 148);
+            this.btnHappy.Size = new System.Drawing.Size(116, 120);
             this.btnHappy.TabIndex = 18;
             this.btnHappy.UseVisualStyleBackColor = false;
             this.btnHappy.Click += new System.EventHandler(this.btnHappy_Click);
@@ -197,9 +212,10 @@
             this.btnSleep.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSleep.BackgroundImage = global::Tamagochi.Properties.Resources._8;
             this.btnSleep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSleep.Location = new System.Drawing.Point(817, 191);
+            this.btnSleep.Location = new System.Drawing.Point(613, 155);
+            this.btnSleep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSleep.Name = "btnSleep";
-            this.btnSleep.Size = new System.Drawing.Size(154, 148);
+            this.btnSleep.Size = new System.Drawing.Size(116, 120);
             this.btnSleep.TabIndex = 17;
             this.btnSleep.UseVisualStyleBackColor = false;
             this.btnSleep.Click += new System.EventHandler(this.btnSleep_Click);
@@ -209,9 +225,10 @@
             this.btnEat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEat.BackgroundImage = global::Tamagochi.Properties.Resources._7;
             this.btnEat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEat.Location = new System.Drawing.Point(626, 191);
+            this.btnEat.Location = new System.Drawing.Point(470, 155);
+            this.btnEat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEat.Name = "btnEat";
-            this.btnEat.Size = new System.Drawing.Size(154, 148);
+            this.btnEat.Size = new System.Drawing.Size(116, 120);
             this.btnEat.TabIndex = 16;
             this.btnEat.UseVisualStyleBackColor = false;
             this.btnEat.Click += new System.EventHandler(this.btnEat_Click);
@@ -220,9 +237,10 @@
             // 
             this.lblHP.BackgroundImage = global::Tamagochi.Properties.Resources._6;
             this.lblHP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.lblHP.Location = new System.Drawing.Point(848, 78);
+            this.lblHP.Location = new System.Drawing.Point(636, 63);
+            this.lblHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblHP.Name = "lblHP";
-            this.lblHP.Size = new System.Drawing.Size(67, 62);
+            this.lblHP.Size = new System.Drawing.Size(50, 50);
             this.lblHP.TabIndex = 13;
             this.lblHP.TabStop = false;
             // 
@@ -230,9 +248,10 @@
             // 
             this.lblClear.BackgroundImage = global::Tamagochi.Properties.Resources._4;
             this.lblClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.lblClear.Location = new System.Drawing.Point(565, 78);
+            this.lblClear.Location = new System.Drawing.Point(424, 63);
+            this.lblClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblClear.Name = "lblClear";
-            this.lblClear.Size = new System.Drawing.Size(67, 62);
+            this.lblClear.Size = new System.Drawing.Size(50, 50);
             this.lblClear.TabIndex = 10;
             this.lblClear.TabStop = false;
             // 
@@ -240,9 +259,10 @@
             // 
             this.lblHappy.BackgroundImage = global::Tamagochi.Properties.Resources._3;
             this.lblHappy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.lblHappy.Location = new System.Drawing.Point(398, 78);
+            this.lblHappy.Location = new System.Drawing.Point(298, 63);
+            this.lblHappy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblHappy.Name = "lblHappy";
-            this.lblHappy.Size = new System.Drawing.Size(67, 62);
+            this.lblHappy.Size = new System.Drawing.Size(50, 50);
             this.lblHappy.TabIndex = 7;
             this.lblHappy.TabStop = false;
             // 
@@ -250,9 +270,10 @@
             // 
             this.lblSleep.BackgroundImage = global::Tamagochi.Properties.Resources._2;
             this.lblSleep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.lblSleep.Location = new System.Drawing.Point(218, 78);
+            this.lblSleep.Location = new System.Drawing.Point(164, 63);
+            this.lblSleep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblSleep.Name = "lblSleep";
-            this.lblSleep.Size = new System.Drawing.Size(67, 62);
+            this.lblSleep.Size = new System.Drawing.Size(50, 50);
             this.lblSleep.TabIndex = 4;
             this.lblSleep.TabStop = false;
             // 
@@ -260,9 +281,10 @@
             // 
             this.pictureBox2.BackgroundImage = global::Tamagochi.Properties.Resources._1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(48, 78);
+            this.pictureBox2.Location = new System.Drawing.Point(36, 63);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -270,18 +292,23 @@
             // 
             this.pbImage.BackgroundImage = global::Tamagochi.Properties.Resources._5;
             this.pbImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbImage.Location = new System.Drawing.Point(48, 191);
+            this.pbImage.Location = new System.Drawing.Point(36, 155);
+            this.pbImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(540, 394);
+            this.pbImage.Size = new System.Drawing.Size(405, 320);
             this.pbImage.TabIndex = 0;
             this.pbImage.TabStop = false;
             // 
+            // gameTimer
+            // 
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1021, 667);
+            this.ClientSize = new System.Drawing.Size(766, 542);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnHappy);
@@ -303,6 +330,7 @@
             this.Controls.Add(this.lblEatCur);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pbImage);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.lblHP)).EndInit();
@@ -339,6 +367,7 @@
         private System.Windows.Forms.Button btnHappy;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblGameOver;
+        private System.Windows.Forms.Timer gameTimer;
     }
 }
 
