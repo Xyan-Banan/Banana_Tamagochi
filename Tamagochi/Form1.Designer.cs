@@ -59,6 +59,7 @@
             this.pbQueue5 = new System.Windows.Forms.PictureBox();
             this.pbQueue6 = new System.Windows.Forms.PictureBox();
             this.btnAction = new System.Windows.Forms.Button();
+            this.queue_timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lblHP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblHappy)).BeginInit();
@@ -201,7 +202,7 @@
             this.btnClear.BackgroundImage = global::Tamagochi.Properties.Resources._10;
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClear.Location = new System.Drawing.Point(613, 355);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(116, 120);
             this.btnClear.TabIndex = 19;
@@ -214,7 +215,7 @@
             this.btnHappy.BackgroundImage = global::Tamagochi.Properties.Resources._9;
             this.btnHappy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnHappy.Location = new System.Drawing.Point(470, 355);
-            this.btnHappy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHappy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHappy.Name = "btnHappy";
             this.btnHappy.Size = new System.Drawing.Size(116, 120);
             this.btnHappy.TabIndex = 18;
@@ -227,7 +228,7 @@
             this.btnSleep.BackgroundImage = global::Tamagochi.Properties.Resources._8;
             this.btnSleep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSleep.Location = new System.Drawing.Point(613, 155);
-            this.btnSleep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSleep.Margin = new System.Windows.Forms.Padding(2);
             this.btnSleep.Name = "btnSleep";
             this.btnSleep.Size = new System.Drawing.Size(116, 120);
             this.btnSleep.TabIndex = 17;
@@ -240,7 +241,7 @@
             this.btnEat.BackgroundImage = global::Tamagochi.Properties.Resources._7;
             this.btnEat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEat.Location = new System.Drawing.Point(470, 155);
-            this.btnEat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEat.Margin = new System.Windows.Forms.Padding(2);
             this.btnEat.Name = "btnEat";
             this.btnEat.Size = new System.Drawing.Size(116, 120);
             this.btnEat.TabIndex = 16;
@@ -252,7 +253,7 @@
             this.lblHP.BackgroundImage = global::Tamagochi.Properties.Resources._6;
             this.lblHP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.lblHP.Location = new System.Drawing.Point(636, 63);
-            this.lblHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblHP.Margin = new System.Windows.Forms.Padding(2);
             this.lblHP.Name = "lblHP";
             this.lblHP.Size = new System.Drawing.Size(50, 50);
             this.lblHP.TabIndex = 13;
@@ -263,7 +264,7 @@
             this.lblClear.BackgroundImage = global::Tamagochi.Properties.Resources._4;
             this.lblClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.lblClear.Location = new System.Drawing.Point(424, 63);
-            this.lblClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblClear.Margin = new System.Windows.Forms.Padding(2);
             this.lblClear.Name = "lblClear";
             this.lblClear.Size = new System.Drawing.Size(50, 50);
             this.lblClear.TabIndex = 10;
@@ -274,7 +275,7 @@
             this.lblHappy.BackgroundImage = global::Tamagochi.Properties.Resources._3;
             this.lblHappy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.lblHappy.Location = new System.Drawing.Point(298, 63);
-            this.lblHappy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblHappy.Margin = new System.Windows.Forms.Padding(2);
             this.lblHappy.Name = "lblHappy";
             this.lblHappy.Size = new System.Drawing.Size(50, 50);
             this.lblHappy.TabIndex = 7;
@@ -285,7 +286,7 @@
             this.lblSleep.BackgroundImage = global::Tamagochi.Properties.Resources._2;
             this.lblSleep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.lblSleep.Location = new System.Drawing.Point(164, 63);
-            this.lblSleep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblSleep.Margin = new System.Windows.Forms.Padding(2);
             this.lblSleep.Name = "lblSleep";
             this.lblSleep.Size = new System.Drawing.Size(50, 50);
             this.lblSleep.TabIndex = 4;
@@ -296,7 +297,7 @@
             this.pictureBox2.BackgroundImage = global::Tamagochi.Properties.Resources._1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(36, 63);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 1;
@@ -307,7 +308,7 @@
             this.pbImage.BackgroundImage = global::Tamagochi.Properties.Resources._5;
             this.pbImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbImage.Location = new System.Drawing.Point(36, 155);
-            this.pbImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbImage.Margin = new System.Windows.Forms.Padding(2);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(405, 320);
             this.pbImage.TabIndex = 0;
@@ -332,6 +333,7 @@
             this.pbQueue1.Location = new System.Drawing.Point(809, 93);
             this.pbQueue1.Name = "pbQueue1";
             this.pbQueue1.Size = new System.Drawing.Size(54, 50);
+            this.pbQueue1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQueue1.TabIndex = 22;
             this.pbQueue1.TabStop = false;
             // 
@@ -340,6 +342,7 @@
             this.pbQueue2.Location = new System.Drawing.Point(809, 149);
             this.pbQueue2.Name = "pbQueue2";
             this.pbQueue2.Size = new System.Drawing.Size(54, 50);
+            this.pbQueue2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQueue2.TabIndex = 22;
             this.pbQueue2.TabStop = false;
             // 
@@ -348,6 +351,7 @@
             this.pbQueue3.Location = new System.Drawing.Point(809, 205);
             this.pbQueue3.Name = "pbQueue3";
             this.pbQueue3.Size = new System.Drawing.Size(54, 50);
+            this.pbQueue3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQueue3.TabIndex = 22;
             this.pbQueue3.TabStop = false;
             // 
@@ -356,6 +360,7 @@
             this.pbQueue4.Location = new System.Drawing.Point(809, 261);
             this.pbQueue4.Name = "pbQueue4";
             this.pbQueue4.Size = new System.Drawing.Size(54, 50);
+            this.pbQueue4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQueue4.TabIndex = 22;
             this.pbQueue4.TabStop = false;
             // 
@@ -364,6 +369,7 @@
             this.pbQueue5.Location = new System.Drawing.Point(809, 317);
             this.pbQueue5.Name = "pbQueue5";
             this.pbQueue5.Size = new System.Drawing.Size(54, 50);
+            this.pbQueue5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQueue5.TabIndex = 22;
             this.pbQueue5.TabStop = false;
             // 
@@ -372,6 +378,7 @@
             this.pbQueue6.Location = new System.Drawing.Point(809, 373);
             this.pbQueue6.Name = "pbQueue6";
             this.pbQueue6.Size = new System.Drawing.Size(54, 50);
+            this.pbQueue6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQueue6.TabIndex = 22;
             this.pbQueue6.TabStop = false;
             // 
@@ -383,6 +390,11 @@
             this.btnAction.TabIndex = 23;
             this.btnAction.Text = "DO IT!!!";
             this.btnAction.UseVisualStyleBackColor = true;
+            this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
+            // 
+            // queue_timer
+            // 
+            this.queue_timer.Tick += new System.EventHandler(this.queue_timer_Tick);
             // 
             // Form1
             // 
@@ -419,7 +431,7 @@
             this.Controls.Add(this.lblEatCur);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pbImage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.lblHP)).EndInit();
@@ -471,6 +483,7 @@
         private System.Windows.Forms.PictureBox pbQueue5;
         private System.Windows.Forms.PictureBox pbQueue6;
         private System.Windows.Forms.Button btnAction;
+        private System.Windows.Forms.Timer queue_timer;
     }
 }
 

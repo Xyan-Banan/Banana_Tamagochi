@@ -27,6 +27,9 @@ namespace Tamagochi
         public static int speed;
         public static int default_sub;
 
+        public static MyQueue queue;
+        public static int queueSpeed;
+
         public Settings()
         {
             eat = new Scale();
@@ -38,8 +41,11 @@ namespace Tamagochi
             sub = 8;
 
             is_gameover = false;
-            speed = 10;
+            speed = 2;
             default_sub = 1;
+
+            queue = new MyQueue(6);
+            queueSpeed = 16;
         }
     }
 }

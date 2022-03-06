@@ -20,6 +20,13 @@ namespace Tamagochi
             }
         }
 
+        public MyQueue(int _capacity)
+        {
+            capacity = _capacity;
+            count_busy = 0;
+            elements = new KeyValuePair<Actions, Image>?[capacity];
+        }
+
         public bool Enqueue(KeyValuePair<Actions, Image> pair)
         {
             if(count_busy == capacity)
@@ -34,8 +41,20 @@ namespace Tamagochi
 
         public KeyValuePair<Actions,Image>? Dequeue()
         {
+            if(count_busy == 0)
+            {
+                return null;
+            }
 
+            KeyValuePair<Actions, Image>? element = elements[0];
+
+            for(int i = 0; i < count_busy - 1; i++)
+            {
+                elements[i] = elements[i + 1];
+            }
+            elements[count_busy - 1] = null;
+            count_busy--;
+            return element;
         }
-
     }
 }

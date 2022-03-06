@@ -12,14 +12,28 @@ namespace Tamagochi
 {
     partial class Form1 : Form
     {
+        PictureBox[] queue;
         public Form1()
         {
             InitializeComponent();
 
             new Settings();
 
+            queue = new PictureBox[]
+            {
+                pbQueue1,
+                pbQueue2,
+                pbQueue3,
+                pbQueue4,
+                pbQueue5,
+                pbQueue6
+            };
+
             gameTimer.Interval = 1000 / Settings.speed;
             gameTimer.Start();
+
+            queue_timer.Interval = 1000 / Settings.queueSpeed;
+            queue_timer.Start();
 
             init_game();
         }
@@ -82,6 +96,7 @@ namespace Tamagochi
             btnHappy.Enabled = false;
             btnClear.Enabled = false;
             btnSleep.Enabled = false;
+            btnAction.Enabled = false;
         }
         void generate_action(Random random)
         {
@@ -118,14 +133,35 @@ namespace Tamagochi
 
         private void btnEat_Click(object sender, EventArgs e)
         {
+            //eating();
+            Settings.queue.Enqueue(
+                new KeyValuePair<Actions, Image>(
+                    Actions.Eat,
+                    Properties.Resources._7
+                    )
+                );
+        }
+
+        private void eating()
+        {
             Settings.eat.add_value(Settings.add);
             Settings.clear.sub_value(Settings.sub);
             set_scales();
             Settings.is_gameover = is_die();
         }
 
-
         private void btnSleep_Click(object sender, EventArgs e)
+        {
+            //sleeping();
+            Settings.queue.Enqueue(
+                new KeyValuePair<Actions, Image>(
+                    Actions.Sleep,
+                    Properties.Resources._8
+                    )
+                );
+        }
+
+        private void sleeping()
         {
             Settings.sleep.add_value(Settings.add);
             Settings.eat.sub_value(Settings.sub);
@@ -135,6 +171,17 @@ namespace Tamagochi
 
         private void btnHappy_Click(object sender, EventArgs e)
         {
+            //playing();
+            Settings.queue.Enqueue(
+                new KeyValuePair<Actions, Image>(
+                    Actions.Game,
+                    Properties.Resources._9
+                    )
+                );
+        }
+
+        private void playing()
+        {
             Settings.happy.add_value(Settings.add);
             Settings.sleep.sub_value(Settings.sub);
             set_scales();
@@ -142,6 +189,17 @@ namespace Tamagochi
         }
 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+            //showering();
+            Settings.queue.Enqueue(
+                new KeyValuePair<Actions, Image>(
+                    Actions.Clear,
+                    Properties.Resources._10
+                    )
+                );
+        }
+
+        private void showering()
         {
             Settings.clear.add_value(Settings.add);
             Settings.happy.sub_value(Settings.sub);
@@ -159,11 +217,54 @@ namespace Tamagochi
             {
                 Random random = new Random();
                 int is_action = random.Next(0, 2);
-                if(is_action == 1)
+                if (is_action == 1)
                 {
                     generate_action(random);
                 }
             }
+        }
+
+        private void queue_timer_Tick(object sender, EventArgs e)
+        {
+            var elements = Settings.queue.Elements;
+            for (int i = 0; i < elements.Length; i++)
+            {
+                if (elements[i] != null)
+                {
+                    var element = elements[i];                                   //может быть null
+                    var checked_element = (KeyValuePair<Actions, Image>)element; //НЕ может быть null
+                    queue[i].Image = checked_element.Value;
+                }
+                else
+                {
+                    queue[i].Image = null;
+                }
+            }
+        }
+
+        private void btnAction_Click(object sender, EventArgs e)
+        {
+            var element = Settings.queue.Dequeue();
+            if (element == null)
+                return;
+
+            var checked_element = (KeyValuePair<Actions, Image>)element;
+            switch (checked_element.Key)
+            {
+                case Actions.Eat:
+                    eating();
+                    break;
+                case Actions.Clear:
+                    showering();
+                    break;
+                case Actions.Game:
+                    playing();
+                    break;
+                case Actions.Sleep:
+                    sleeping();
+                    break;
+            }
+
         }
     }
 }
